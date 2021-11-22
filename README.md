@@ -1,7 +1,9 @@
 # Learn Terraform - Provision an EKS Cluster
 https://learn.hashicorp.com/tutorials/terraform/eks
 
-This repo is a companion repo to the [Provision an EKS Cluster learn guide](https://learn.hashicorp.com/terraform/kubernetes/provision-eks-cluster), containing
+Configure aws cli
+
+aws configure 
 
 Terraform configuration files to provision an EKS cluster on AWS.
 
@@ -17,7 +19,5 @@ Now that you've provisioned your EKS cluster, you need to configure kubectl.
 Run the following command to retrieve the access credentials for your cluster and automatically configure kubectl.
 
 aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw cluster_name)
-
-
 
 https://registry.terraform.io/providers/hashicorp/aws/2.52.0/docs/resources/eks_cluster
